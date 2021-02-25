@@ -1,3 +1,4 @@
+%define commit c83d1e93eb3a5b8b6a9db41c2613b206f344f825
 %define major 0
 %define libname %mklibname usb3380 %{major}
 %define devname %mklibname -d usb3380
@@ -10,7 +11,7 @@ License:        LGPL-2.1-only
 Group:          Development/Libraries/C and C++
 URL:            http://xtrx.io
 #Git-Clone:     https://github.com/xtrx-sdr/libusb3380.git
-Source:         %{name}-%{version}.tar.xz
+Source0:	https://github.com/xtrx-sdr/libusb3380/archive/%{commit}.zip
 Patch0:         libusb3380-cmake-fix-compiler-setup.patch
 BuildRequires:  cmake
 BuildRequires:  git-core
@@ -39,7 +40,8 @@ This subpackage contains libraries and header files for developing
 applications that want to make use of libusb3380.
 
 %prep
-%autosetup -p1
+%setup -q -n %{name}-%{commit}
+%autopatch -p1
 
 %build
 export CFLAGS="%{optflags} -pthread"
