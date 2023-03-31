@@ -5,7 +5,7 @@
 
 Name:           libusb3380
 Version:        0.0.0+git.20190126
-Release:        1.1
+Release:        1.2
 Summary:        USB3380 abstraction layer for libusb
 License:        LGPL-2.1-only
 Group:          Development/Libraries/C and C++
