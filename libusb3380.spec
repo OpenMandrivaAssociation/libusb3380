@@ -9,7 +9,7 @@ Release:        1.2
 Summary:        USB3380 abstraction layer for libusb
 License:        LGPL-2.1-only
 Group:          Development/Libraries/C and C++
-URL:            http://xtrx.io
+URL:            https://xtrx.io
 #Git-Clone:     https://github.com/xtrx-sdr/libusb3380.git
 Source0:	https://github.com/xtrx-sdr/libusb3380/archive/%{commit}.zip
 Patch0:         libusb3380-cmake-fix-compiler-setup.patch
